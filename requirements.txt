@@ -1,0 +1,16 @@
+torch
+torchvision
+torchaudio
+transformers
+numpy
+opencv-python
+tensorboard
+tensorboardX
+albumentations
+pillow
+pycocotools
+pyyaml
+omegaconf==2.0.6
+cloudpickle
+hydra-core==1.0.7
+termcolor
