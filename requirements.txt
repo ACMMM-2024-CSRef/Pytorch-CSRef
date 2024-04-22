@@ -1,7 +1,7 @@
 torch
 torchvision
 torchaudio
-transformers
+transformers==4.30.2
 numpy
 opencv-python
 tensorboard

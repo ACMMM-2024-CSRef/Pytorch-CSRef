@@ -55,15 +55,12 @@ def save_checkpoint(cfg, epoch, model, optimizer, scheduler, logger, det_best=Fa
     }
     save_path = os.path.join(cfg.train.output_dir, f'ckpt_epoch_{epoch}.pth')
 
-    # TODO 防止重复保存模型浪费时间
     if not os.path.exists(save_path):
         torch.save(save_state, save_path)
 
     # save last checkpoint
     last_checkpoint_path = os.path.join(cfg.train.output_dir, f'last_checkpoint.pth')
-    # if not os.path.exists(last_checkpoint_path):
-    #     torch.save(save_state, last_checkpoint_path)
-    torch.save(save_state, last_checkpoint_path)  # TODO 改掉只保存第一次last checkpoint的bug
+    torch.save(save_state, last_checkpoint_path)  
 
     # save the best detection model
     if det_best:
@@ -76,14 +73,12 @@ def save_checkpoint(cfg, epoch, model, optimizer, scheduler, logger, det_best=Fa
         torch.save(save_state, seg_best_model_path)
 
 
-# 保存数据集对应的token_to_ix、max_token和input_shape，方便inference时直接读取，避免重复调用初始化dataset进行统计
 def save_for_predict(cfg, dataset):
     save_state = {
         'max_token': dataset.max_token,
         'token_to_ix': dataset.token_to_ix,
         'input_shape': dataset.input_shape
     }
-    # save_path = os.path.join(cfg.train.output_dir, f'parameters_for_{cfg.dataset.dataset}_predict.pth')
     save_path = os.path.join("inference_parameters", f'parameters_for_{cfg.dataset.dataset}_predict.pth')
     torch.save(save_state, save_path)
 

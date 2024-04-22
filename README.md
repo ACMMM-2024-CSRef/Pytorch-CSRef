@@ -10,6 +10,15 @@ This repository contains the code for "Contrastive Semantic Alignment for Speech
 4. Download [bert-base-uncased](https://huggingface.co/bert-base-uncased) and [wav2vec2-base](https://huggingface.co/facebook/wav2vec2-base) from HuggingFace to the `data/weights/` folder
 
 
+## Installation
+- Clone this repo
+- Create a conda virtual environment and activate it
+```bash
+conda create -n csref python=3.7.16
+```
+- Install Pytorch
+- Install other packages in `requirements.txt`
+
 
 ## Training
 
