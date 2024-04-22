@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2f14b25e-ef02-4f43-8fa8-8a20f1b3e331" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tools/train_CSA.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/train_CSA.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/csref_refcoco+.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/csref_refcoco+_speech.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/csref_refcoco.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/csref_refcoco_speech.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/csref_refcocog.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/csref_refcocog_speech.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/csref_srefface+.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/csref_srefface+.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/csref_srefface.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/csref_srefface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/csref_sreffaceg.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs/csref_sreffaceg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csref/models/csref.py" beforeDir="false" afterPath="$PROJECT_DIR$/csref/models/csref.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csref/models/speech_encoders/wav2vec2.py" beforeDir="false" afterPath="$PROJECT_DIR$/csref/models/speech_encoders/wav2vec2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csref/models/text_encoder/bert.py" beforeDir="false" afterPath="$PROJECT_DIR$/csref/models/text_encoder/bert.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/anns/face_centric/srefface+.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/anns/face_centric/srefface.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/anns/face_centric/sreffaceg.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/anns/general_object/refcoco+_speech.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/anns/general_object/refcoco_speech.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/anns/general_object/refcocog_speech.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/eval_engine_speech.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/eval_engine_speech.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/train_engine_speech.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/train_engine_speech.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2fHG7NN0euKQsMVUKDSrC3AsZmt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\lihong_data\code\PyTorch-CSRef\configs\common" />
+      <recent name="D:\lihong_data\code\PyTorch-CSRef\configs" />
+      <recent name="D:\lihong_data\code\PyTorch-CSRef\configs\common\models" />
+      <recent name="D:\lihong_data\code\PyTorch-CSRef\csref\models" />
+      <recent name="D:\lihong_data\code\PyTorch-CSRef\tools" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\lihong_data\code\PyTorch-CSRef\tools" />
+      <recent name="D:\lihong_data\code\PyTorch-CSRef\csref\models\text_encoder" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f14b25e-ef02-4f43-8fa8-8a20f1b3e331" name="Changes" comment="" />
+      <created>1713450423740</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713450423740</updated>
+      <workItem from="1713450424946" duration="4772000" />
+      <workItem from="1713597824783" duration="24681000" />
+      <workItem from="1713756859290" duration="150000" />
+      <workItem from="1713757014243" duration="45000" />
+      <workItem from="1713758176588" duration="513000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

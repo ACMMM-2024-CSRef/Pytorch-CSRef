@@ -1,26 +1,10 @@
-# coding=utf-8
-# Copyright 2022 The SimREC Authors. All rights reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-import numpy as np
-
 import torch
 import torch.nn as nn
 
 torch.backends.cudnn.enabled = False
 
 
+# Speech Referring Expression Comprehension (SREC) stage
 class CSRef(nn.Module):
     def __init__(
             self,
@@ -65,17 +49,11 @@ class CSRef(nn.Module):
         # multi-scale fusion layer
         top_feats, _, _ = self.attention_manner(y['flat_feat'], x[-1])
 
-        bot_feats = x[0]
 
         # output
         if self.training:
-            # loss, loss_det, loss_seg = self.head(top_feats, bot_feats, det_label, seg_label)
-            # loss, loss_det, loss_seg = self.head(top_feats, bot_feats, det_label)
-            # return loss, loss_det, loss_seg
             loss = self.head(top_feats, labels=det_label)
             return loss
         else:
-            # box, mask = self.head(top_feats, bot_feats)
-            # return box, mask
             box = self.head(top_feats)
             return box

@@ -241,10 +241,6 @@ def main(cfg):
                 save_checkpoint(cfg, epoch, model_without_ddp, optimizer, scheduler, logger, det_best=True)
                 best_det_acc = box_ap
                 logger.info(f"best_det_checkpoints saved !!!")
-            if mask_ap > best_seg_acc:
-                save_checkpoint(cfg, epoch, model_without_ddp, optimizer, scheduler, logger, seg_best=True)
-                best_seg_acc = mask_ap
-                logger.info(f"best_seg_checkpoints saved !!!")
             if ema is not None:
                 ema.restore()
 
@@ -252,7 +248,7 @@ def main(cfg):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="SimREC")
+    parser = argparse.ArgumentParser(description="csref_SREC")
     parser.add_argument('--config', type=str, required=True, default='./config/simrec_refcoco_scratch.py')
     parser.add_argument(
         "opts",

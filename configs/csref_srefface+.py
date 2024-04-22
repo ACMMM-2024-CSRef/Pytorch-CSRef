@@ -40,7 +40,7 @@ optim.lr = train.base_lr
 model.visual_backbone.pretrained = True
 model.visual_backbone.pretrained_weight_path = "./data/weights/cspdarknet_coco.pth"
 model.speech_encoder.short_cut = True
-model.audio_encoder.pretrained_path = "data/weights/wav2vec2-base"
+model.speech_encoder.pretrained_path = "data/weights/wav2vec2-base"
 # model.speech_encoders.pretrained_path = "data/weights/wav2vec2-base-960h"
 
 model.speech_encoder.freeze_model = True

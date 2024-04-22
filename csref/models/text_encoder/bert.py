@@ -5,17 +5,13 @@ from transformers import BertModel
 class Bert(nn.Module):
     def __init__(
             self,
-            pretrained_path="data/weights/bert-large-uncased",
+            pretrained_path="data/weights/bert-base-uncased",
             freeze_model=True,
-            use_one_hidden_state_as_feat=True,
             hidden_state_index=-1,
-            use_att_flat_mask=True,
     ):
         super(Bert, self).__init__()
 
-        self.use_one_hidden_state_as_feat = use_one_hidden_state_as_feat
         self.hidden_state_index = hidden_state_index
-        self.use_att_flat_mask = use_att_flat_mask
 
         self.model = BertModel.from_pretrained(pretrained_path)
 
@@ -42,8 +38,7 @@ class Bert(nn.Module):
             return_dict=True
         )
 
-        feat = None
-        if self.use_one_hidden_state_as_feat:
-            hidden_state = output.hidden_states[self.hidden_state_index]  # large[b, len ,c(1024)]
-            feat = hidden_state[:, 0, :]  # (batch, len, channel)
+        hidden_state = output.hidden_states[self.hidden_state_index]
+        feat = hidden_state[:, 0, :]  # corresponding to [CLS] token
+
         return feat

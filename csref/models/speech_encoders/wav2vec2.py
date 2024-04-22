@@ -51,7 +51,7 @@ class Wav2vec2(nn.Module):
             flat_glimpses=1,
             dropout_rate=0.1,
             target_sr=16000,
-            pretrained_path="/data/weights/wav2vec2-base-960h",
+            pretrained_path="data/weights/wav2vec2-base-960h",
             freeze_model=False,
             use_one_hidden_state_as_feat=True,
             hidden_state_index=-1,
