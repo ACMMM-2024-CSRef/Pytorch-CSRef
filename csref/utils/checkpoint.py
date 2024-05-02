@@ -39,7 +39,7 @@ def load_checkpoint_for_audio_encoder(cfg, model, logger):
     state_dict = checkpoint['state_dict']
     new_state_dict = {}
     for k, v in state_dict.items():
-        if k.startswith("audio_encoder."):
+        if k.startswith("speech_encoder."):
             new_state_dict[k] = v
     msg = model.load_state_dict(new_state_dict, strict=False)
     logger.info(msg)

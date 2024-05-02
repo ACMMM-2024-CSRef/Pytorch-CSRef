@@ -35,9 +35,7 @@ def train_one_epoch(cfg, model, optimizer, scheduler, data_loader, scalar, write
     batch_time = AverageMeter('Time', ':6.5f')
     data_time = AverageMeter('Data', ':6.5f')
     losses = AverageMeter('Loss', ':.4f')
-    losses_det = AverageMeter('LossDet', ':.4f')
-    losses_seg = AverageMeter('LossSeg', ':.4f')
-    meters = [batch_time, data_time, losses, losses_det, losses_seg]
+    meters = [batch_time, data_time, losses]
     meters_dict = {meter.name: meter for meter in meters}
 
     start = time.time()
@@ -94,7 +92,7 @@ def train_one_epoch(cfg, model, optimizer, scheduler, data_loader, scalar, write
         reduce_meters(meters_dict, rank, cfg)
         if is_main_process():
             global_step = epoch * num_iters + idx
-            writer.add_scalar("loss_det/train", losses_det.avg_reduce, global_step=global_step)
+            writer.add_scalar("loss/train", losses.avg_reduce, global_step=global_step)
 
             lr = optimizer.param_groups[0]['lr']
             writer.add_scalar("lr/train", lr, global_step=global_step)
@@ -107,7 +105,7 @@ def train_one_epoch(cfg, model, optimizer, scheduler, data_loader, scalar, write
                 f'Train: [{epoch}/{cfg.train.epochs}][{idx}/{num_iters}]  '
                 f'eta {datetime.timedelta(seconds=int(etas))} lr {lr:.7f}  '
                 f'Time {batch_time.val:.4f} ({batch_time.avg:.4f})  '
-                f'Det Loss {losses_det.val:.4f} ({losses_det.avg:.4f})  '
+                f'Det Loss {losses.val:.4f} ({losses.avg:.4f})  '
                 f'Mem {memory_used:.0f}MB')
 
         batch_time.update(time.time() - end)

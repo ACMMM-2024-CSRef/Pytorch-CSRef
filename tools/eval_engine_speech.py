@@ -75,7 +75,7 @@ def validate(cfg, model, data_loader, writer, epoch, logger, rank, audio_preproc
                 logger.info(
                     f'Evaluation on {prefix}: [{idx}/{len(data_loader)}]  '
                     f'Time {batch_time.val:.3f} ({batch_time.avg:.3f})  '
-                    f'Loss {losses.val:.4f} ({losses.avg:.4f})  '
+                    # f'Loss {losses.val:.4f} ({losses.avg:.4f})  '
                     f'BoxIoU@0.5 {box_ap.val:.4f} ({box_ap.avg:.4f})  '
                     f'Mem {memory_used:.0f}MB')
             sample_time.update((time.time() - end) / cfg.train.evaluation.eval_batch_size)
